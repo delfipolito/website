@@ -55,11 +55,6 @@ export default {
       component: 'src/pages/Network',
       getData: () => ({ title: '' }),
     },
-    {
-      is404: true,
-      component: 'src/pages/NotFound',
-      getData: () => ({ title: 'Page Not Found' }),
-    },
   ],
   paths: REACT_STATIC_PATHS,
   webpack: (conf, { defaultLoaders }) => {
