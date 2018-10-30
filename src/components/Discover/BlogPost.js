@@ -14,21 +14,21 @@ const mudule1Content = (
   );
 const mudule2Content = (
   <span>
-    <p><a className="action-button" href="https://app.aragon.org" target="_blank"><span>Read more <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
+    <p><a className="action-button" href="https://app.aragon.org" target="_blank"><span>Try it now <img src={require(`../General/assets/arrow.svg`)}/></span></a></p>
   </span>
 );
 const BlogPost = () => (
   <Section>
     <Container>
-      <MariasPost background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></MariasPost>
-      <LongCard background={'Discover/assets/background-discover4.png'} colorWhite textAlign="center" title="Reclaim your freedom now" content={mudule2Content}></LongCard>
+      <MariasPost linkTo="https://blog.aragon.org/decentralized-organizations-can-solve-the-worlds-worst-problems-840db6255d12/" background={'Discover/assets/background-discover3.png'} colorWhite textAlign="left" title="Freeing the Marias of the world" content={mudule1Content}></MariasPost>
+      <LongCard linkTo="https://app.aragon.org" background={'Discover/assets/background-discover4.png'} colorWhite textAlign="center" title="Reclaim your freedom now" content={mudule2Content}></LongCard>
     </Container>
   </Section>
 );
 
 const Container = styled.div`
   display: grid;
-  ${medium('grid-template-columns: 50% 50%; grid-template-rows: 500px 500px')};
+  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px')};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;

@@ -10,7 +10,7 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
   <span>
-    <p>We are a community with the mission to empower freedom by creating tools for decentralized organizations to thrive.</p>
+    <p>The Aragon project is a community with the mission to empower freedom by creating tools for decentralized organizations to thrive.</p>
     <p><Link to="/project" className="action-button"><span>About <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
@@ -22,7 +22,7 @@ const mudule2Content = (
 );
 const mudule3Content = (
   <span>
-    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday lives. Aragon Nest, our grants program, is bringing it to reality.</p>
+    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday lives. Aragon Nest helps bringing it to reality.</p>
     <p><Link to="project/grants"className="action-button"><span>Nest <img src={require(`../General/assets/arrow.svg`)}/></span></Link></p>
   </span>
 );
@@ -42,18 +42,18 @@ const mudule5Content = (
 const About = () => (
   <Section>
     <Container>
-      <Card imageUrl={'Home/home-assets/home1'} title="On a fight for freedom" content={mudule1Content}></Card>
-      <Card imageUrl={'Home/home-assets/home2'} title="Build human collaboration" content={mudule2Content}></Card>
-      <LongCard background={'Home/home-assets/background-home1.png'} image={'Home/home-assets/home5.png'} textAlign="left" colorWhite title="The world’s first digital jurisdiction" content={mudule5Content}></LongCard>
-      <Card imageUrl={'Home/home-assets/home3'} title="Nest, our grants program" content={mudule3Content}></Card>
-      <Card imageUrl={'Home/home-assets/home4'} title={(<span>Join <br/>the fight</span>)} content={mudule4Content}></Card>
+      <Card linkTo="/project" imageUrl={'Home/home-assets/home1'} title="On a fight for freedom" content={mudule1Content}></Card>
+      <Card linkTo="https://hack.aragon.org/" imageUrl={'Home/home-assets/home2'} title="Build human collaboration" content={mudule2Content}></Card>
+      <LongCard linkTo="/network" background={'Home/home-assets/background-home1.png'} image={'Home/home-assets/home5.png'} textAlign="left" colorWhite title="The world’s first digital jurisdiction" content={mudule5Content}></LongCard>
+      <Card linkTo="/project/contribute"  imageUrl={'Home/home-assets/home3'} title="Nest, our grants program" content={mudule3Content}></Card>
+      <Card linkTo="/network"  imageUrl={'Home/home-assets/home4'} title={(<span>Join <br/>the fight</span>)} content={mudule4Content}></Card>
     </Container>
   </Section>
 );
 
 const Container = styled.div`
   display: grid;
-  ${medium('grid-template-columns: 50% 50%; grid-template-rows: 500px 500px 500px')};
+  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px 500px')};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;

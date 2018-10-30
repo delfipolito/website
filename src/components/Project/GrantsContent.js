@@ -8,9 +8,9 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
   <span>
-    <p>Aragon Nest is run in the open. That way, we ensure we remain transparent to our community and the grant recipients and applicants. Everything going on in Nest is reflected in GitHub.</p>
+    <p>Aragon Nest is run in the open. We want to remain transparent to our community and the grant applicants. Everything going on in Nest is reflected in GitHub.</p>
     <p>
-      <a className="action-button" href=" https://github.com/aragon/nest" target="_blank">
+      <a className="action-button" href="https://github.com/aragon/nest" target="_blank">
         <span>Nest in GitHub <img src={require(`../General/assets/arrow.svg`)}/></span>
       </a>
     </p>
@@ -18,7 +18,7 @@ const mudule1Content = (
 );
 const mudule2Content = (
   <span>
-    <p>We are looking for people that want to help the Aragon and Ethereum ecosystems advance. If you believe you have a proposal or an application for the program, read more and apply.</p>
+    <p>We are looking for people that want to help the Aragon and Ethereum ecosystems advance. If you believe you have a proposal for the program, read more and apply.</p>
     <p>
       <a className="action-button" href="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant" target="_blank">
         <span>Apply <img src={require(`../General/assets/arrow.svg`)}/></span>
@@ -50,15 +50,15 @@ const GrantsContent = () => (
           </div>
         </LongCardContainer>
       </LongCard>
-      <Card imageUrl={'Project/assets/governance2'} title="Fully transparent" content={mudule1Content}></Card>
-      <Card imageUrl={'Home/home-assets/home4'} title="Apply now" content={mudule2Content}></Card>
+      <Card linkTo="https://github.com/aragon/nest" imageUrl={'Project/assets/governance2'} title="Fully transparent" content={mudule1Content}></Card>
+      <Card linkTo="https://github.com/aragon/nest#how-to-submit-a-proposal-for-a-grant" imageUrl={'Home/home-assets/home4'} title="Apply now" content={mudule2Content}></Card>
     </Container>
   </Section>
 );
 
 const Container = styled.div`
   display: grid;
-  ${medium('grid-template-columns: 50% 50%; grid-template-rows: 500px 500px')};
+  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px')};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;

@@ -38,6 +38,7 @@ const HeroSection = styled(Section)`
   padding-top: 64px;
   display: flex;
   align-items: center;
+  overflow: hidden;
   justify-content: center;
 `;
 const Box = styled.div`
@@ -51,6 +52,9 @@ const Container = styled.div`
   width: 100%;
   h2, h4 {
     text-align: left;
+  }
+  h2 {
+    margin-top: 0;
   }
   iframe {
     width: 90%;

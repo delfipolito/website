@@ -11,10 +11,10 @@ const medium = css => breakpoint('medium', css);
 
 const mudule1Content = (
   <span>
-    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday. Aragon Nest, our grants program, helps bring it to reality.</p>
+    <p>Aragon is creating a whole stack of decentralized technologies that merge seamlessly inside people’s everyday. Aragon Nest helps bring it to reality.</p>
     <p>
       <Link className="action-button" to="/project/grants">
-        <span>Discover nest <img src={require(`../General/assets/arrow.svg`)}/></span>
+        <span>Discover Nest <img src={require(`../General/assets/arrow.svg`)}/></span>
       </Link>
     </p>
   </span>
@@ -66,9 +66,9 @@ const About = () => (
           <HistoryImage src={history} />
         </BreakPoint>
       </LongCard>
-      <LongCard textAlign="right" color="#b4b5cc" image={'Project/assets/project3.png'} background="" colorWhite title="Governed by the community" content={module4Content} gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)"></LongCard>
-      <Card imageUrl={'Project/assets/project1'} title="Nest, our grants program" content={mudule1Content}></Card>
-      <Card imageUrl={'Project/assets/project2'} title={(<span>Join<br/> the fight</span>)} content={mudule2Content}></Card>
+      <LongCard linkTo="/project/governance" textAlign="right" color="#b4b5cc" image={'Project/assets/project3.png'} background="" colorWhite title="Governed by the community" content={module4Content} gradient="radial-gradient(circle at 99% 100%, #1c1d23, #2d2e39)"></LongCard>
+      <Card linkTo="/project/grants" imageUrl={'Project/assets/project1'} title="Nest, our grants program" content={mudule1Content}></Card>
+      <Card linkTo="/project/contribute" imageUrl={'Project/assets/project2'} title={(<span>Join<br/> the fight</span>)} content={mudule2Content}></Card>
     </Container>
   </Section>
 );
@@ -124,7 +124,7 @@ const DateBox = styled.div`
 
 const Container = styled.div`
   display: grid;
-  ${medium('grid-template-columns: 50% 50%; grid-template-rows: 500px 500px 500px')};
+  ${medium('grid-template-columns: calc(50% - 15px) calc(50% - 15px); grid-template-rows: 500px 500px 500px')};
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-column-gap: 30px;

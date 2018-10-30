@@ -18,7 +18,7 @@ const Home = () => (
         <Container>
           <h2>Freedom to organize</h2>
           <h4>Aragon lets you freely organize and collaborate without borders or intermediaries. Create global, bureaucracy-free organizations, companies, or communities.</h4>
-          <Button.Anchor className="hero-link" mode="strong" href="./discover" target="_blank">Discover the procuct</Button.Anchor>
+          <Button.Anchor className="hero-link" mode="strong" href="./discover">Discover the product</Button.Anchor>
         </Container>
         <Container>
           <video playsInline autoPlay muted loop>
@@ -33,12 +33,13 @@ const Home = () => (
 
 const HeroSection = styled(Section)`
   background-color: #1c1d23;
-  min-height: 650px;
+  min-height: 600px;
   padding-top: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   video {
     width: auto;
     display:none;
